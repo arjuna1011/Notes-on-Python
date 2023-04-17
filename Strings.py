@@ -39,3 +39,35 @@ print(anotherSplitString)
 print("C:\\Users\\timbulchaka\\notes.txt")
 # or
 print(r"C:\Users\timbulchaka\notes.txt")
+
+# If you would like to print a character of a string, you can use the index position.
+variable = "variable"
+print(variable[4])  # This will print the 4th index position, in this case this would be 'a'. The range starts at 0.
+
+print()
+# You can use the index position to create word challenges like the one below.
+parrot = "Norwegian Blue"
+print(parrot[3])
+print(parrot[4])
+print(parrot[9])
+print(parrot[3])
+print(parrot[6])
+print(parrot[8])
+
+print()
+# You can do this with negative indexing as well. -1 starts at the end of the string, -14 is the beggining.
+print(parrot[-11])
+print(parrot[-10])
+print(parrot[-5])
+print(parrot[-11])
+print(parrot[-8])
+print(parrot[-6])
+
+print()
+# You can just subtract the positive indexing with the amount of characters in the string, for this case, subtract by 14.
+print(parrot[3 - 14])
+print(parrot[4 - 14])
+print(parrot[9 - 14])
+print(parrot[3 - 14])
+print(parrot[6 - 14])
+print(parrot[8 - 14])
