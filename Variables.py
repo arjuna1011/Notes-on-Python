@@ -27,3 +27,11 @@ print(integer)
 boolean = False
 print(boolean)
 
+
+# You can see if a variable contains a certain condition.
+today = "Friday"
+print("day" in today)   # True
+print("Fri" in today)   # True
+print("Sat" in today)   # False
+print("Thur" in today)  # False
+
