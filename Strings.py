@@ -110,6 +110,7 @@ backwards = letters[25::-1]  # zyxwvutsrqponmlkjihgfedcba
 backwards = letters[::-1]  # zyxwvutsrqponmlkjihgfedcba
 print(backwards)
 
+print()
 # More examples of slicing.
 qpo = letters[16:13:-1]
 print(qpo)  # Will print 'qpo'.
@@ -119,6 +120,7 @@ lastEight = letters[25:17:-1]
 print(lastEight)    # Will print the last 8 characters, 'zyxwvuts'.
 
 
+print()
 # String replacement fields
 age = 24
 print("My age is {0} years old.".format(age))
@@ -128,3 +130,9 @@ print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6}, {7}."
 
 print("Jan: {2}, Feb: {0}, Mar: {2}, Apr: {1}, May: {2}, Jun: {1}, Jul: {2}, Sep: {1}, Oct: {2}, Nov: {1}, Dec: {2}."
       .format(28, 30, 31))
+
+
+print()
+# String Formatting
+for i in range(1, 13):
+    print("No. {0:2} squared is {1:4} and cubed is {2:4}".format(i, i ** 2, i ** 3))
