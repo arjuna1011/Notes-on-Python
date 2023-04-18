@@ -87,7 +87,7 @@ else: # If it isn't, this will run.
 i = 0 # Everytime the loop iterates, the value of 1 will increase by 1.
 while i < 10: # When i gets to 10, the loop will terminate, because 10 is not less than 10.
     print("i is now {}".format(i))
-    i += 1 # This is the same as writing i = i + 1. This way is more practical to use.
+    i += 1 # This is the same as writing i = i + 1. This way is more efficient to use.
 
 # Adventure example:
 
