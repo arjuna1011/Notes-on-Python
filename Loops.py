@@ -79,6 +79,18 @@ else: # If it isn't, this will run.
     print("{} not found".format(itemToFind))
 
 
+# Working with else: statements:
+# Good for functions where you want the else statement to operate independently of the if statement, basically if you want the if statement to run over and over again, but the else statement only once.
+numbers = [1, 45, 31, 15, 60]
+
+for number in numbers:
+    if number % 8 == 0:
+        print("The numbers are unacceptable.")
+        break
+else: # We want the else: condition to be indented on the same line as the loop, otherwise it will run alongside the if condition, which we don't want.
+    print("All those numbers are fine.")
+
+
 # --------------------------------------------------------------------------------------------------------------
 
 # While loops: Functions the same as a For Loop, except we can use it to keep looping as long as a condition remains true. If the condition becomes false, the while loop will break automatically.
