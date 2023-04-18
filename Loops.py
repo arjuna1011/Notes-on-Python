@@ -77,3 +77,34 @@ if foundAt is not None: # This will look to see if the item is present in the li
     print("Item found at position {}".format(foundAt))
 else: # If it isn't, this will run.
     print("{} not found".format(itemToFind))
+
+
+# --------------------------------------------------------------------------------------------------------------
+
+# While loops: Functions the same as a For Loop, except we can use it to keep looping as long as a condition remains true. If the condition becomes false, the while loop will break automatically.
+# Here is an example:
+
+i = 0 # Everytime the loop iterates, the value of 1 will increase by 1.
+while i < 10: # When i gets to 10, the loop will terminate, because 10 is not less than 10.
+    print("i is now {}".format(i))
+    i += 1 # This is the same as writing i = i + 1. This way is more practical to use.
+
+# Adventure example:
+
+availableExits = ["north", "south", "east", "west"]
+
+chosenExit = ""
+while chosenExit not in availableExits: # If the user keeps inputting a value that is not located in the sequence, this will keep running.
+    chosenExit = input("Please choose a direction: ").casefold()
+
+print("Glad you were able to make it out alive.")
+
+
+# Although a while loop will break automatically, we can still add a break function to it.
+
+chosenExit = ""
+while chosenExit not in availableExits: # If the user keeps inputting a value that is not located in the sequence, this will keep running.
+    chosenExit = input("Please choose a direction: ").casefold()
+    if chosenExit == "quit": # If the user wants to quit, they can input this value and it will cause the loop to break.
+        print("Game Over") 
+        break # Breaks the loop. This is good because the loop only breaks if the user inputs the correct value, if they want to leave on their own terms, this allows them to.
