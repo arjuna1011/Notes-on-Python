@@ -26,3 +26,33 @@ for i in range(1, 4):
 # However, if you are dividing, you MUST use the integer division method, as Python does NOT allow floats in the range where an int must be used.
 for i in range(1, a//b):
     print(i)
+
+
+# Augmented assignments: These are more efficient to use in your code.
+# For example, instead of saying "var = var + 1", use "var += 1" and you will get the same answer.
+
+x = 23
+
+# Addition - 24
+x += 1
+print(x)
+# Subtraction -  20
+x -= 4
+print(x)
+# Multiplication - 100
+x *= 5
+print(x)
+# Division - 25
+x //= 4
+print(x)
+# Division - 5.0
+x /= 5
+print(x)
+# Multiplication - 25.0
+x **= 2
+print(x)
+# Modulo - 0.0
+x %= 5
+print(x)
+
+# x's value will change with each operation. This saves memory over writing it the longer way.
