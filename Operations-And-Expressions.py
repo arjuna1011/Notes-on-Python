@@ -56,3 +56,12 @@ x %= 5
 print(x)
 
 # x's value will change with each operation. This saves memory over writing it the longer way.
+
+
+# We can sort lists of numbers by their numerical value.
+# You will have to use the sorted() function instead of .sort() like in normal lists.
+# This is because the sorted() function returns a new list, without changing the original
+numbers = [4.2, 61.2, 1.7, 6.2, 4.1]
+sorted_numbers = sorted(numbers)
+print(numbers)
+print(sorted_numbers)

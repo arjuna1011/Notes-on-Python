@@ -136,3 +136,16 @@ print()
 # String Formatting
 for i in range(1, 13):
     print("No. {0:2} squared is {1:4} and cubed is {2:4}".format(i, i ** 2, i ** 3))
+    
+    
+# You can sort strings as well.
+pangram = "The quick brown fox jumps over the lazy dog."
+
+characters = sorted(pangram) # This will sort the list
+# You can replace the variable name with just a string literal, if you don't have a variable to call on.
+print(characters) # This will log the sorted list
+# The thing about sorting strings is it will sort it based on this order
+# spaces -> puncuation and symbols -> Capitals -> lowercase
+# [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '.', 'T', 'a', 'b', 'c', 'd', 'e', 'e', 'e', 
+# 'f', 'g', 'h', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'o', 'o', 'o', 'p', 'q', 'r', 'r', 
+# 's', 't', 'u', 'u', 'v', 'w', 'x', 'y', 'z']
