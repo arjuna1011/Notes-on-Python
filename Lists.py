@@ -80,7 +80,6 @@ grocery_list = []
 
 while current_choice != "0":
     if current_choice in valid_choices:
-        print("Adding {}".format(current_choice))
         index = int(current_choice) -1
         chosen_item = available_items[index]
         if chosen_item in grocery_list:
@@ -89,6 +88,7 @@ while current_choice != "0":
         else:
             print("Adding {}".format(current_choice))
             grocery_list.append(chosen_item)            
+        print("Your list now contains: {}".format(grocery_list))
     else:
         print("Please add options from the list below.")
         for number, item in enumerate(available_items): # The enumerate function just lets you get the index of an element while iterating over a list.
@@ -97,3 +97,18 @@ while current_choice != "0":
     current_choice = input()
 
 print(grocery_list)
+
+
+
+# Sorting lists:
+# Remember these lists we made earlier?  even = [2, 4, 6, 8] and odd = [1, 3, 5, 7, 9]
+# We're going to add them together in order to show off how sorting works.
+# To add 2 lists together, just use the .extend() function.
+
+even.extend(odd)
+print(even) # This logs the new list, which contains the odd list at the end of where even finished.
+
+even.sort() # This will sort the list in order of value, 123... instead of 321....
+print(even)
+even.sort(reverse=True) # This will sort the list backwards, 321... instead of 123....
+print(even)
