@@ -112,3 +112,53 @@ even.sort() # This will sort the list in order of value, 123... instead of 321..
 print(even)
 even.sort(reverse=True) # This will sort the list backwards, 321... instead of 123....
 print(even)
+
+# Creating a list.
+numbers = ("15272359")
+number_list = list(numbers) # This will create a list based on the values you give it.
+print(number_list)
+
+# You can do this without the variable as well.
+word_list = list("This is a new list") # This will create a list of all characters in this string.
+print(word_list)
+
+
+# Comparing lists.
+more_numbers = ["1", "5", "2", "7", "2", "3", "5", "9"]
+print(more_numbers)
+
+print(more_numbers is number_list) # This will compare the 2 lists, and see if they are the same. Even if they contain the same values, if they aren't the same list, it will print false.
+print(more_numbers == number_list) # This will compare the 2 lists and see if they contain the same values.
+
+# A way to copy a list
+another_list = number_list[:] # Slicing the list
+print(another_list)
+
+# Another more practical way of copying a list.
+another_list = number_list.copy()
+print(another_list)
+
+# Replacing the slice.
+new_list = ["this",
+            "is",
+            "a",
+            "new",
+            "list"
+            ]
+
+print(new_list[2:]) # This will grab the items "a", "new", and "list". 
+
+new_list[2:] = ["slicing"] # This will replace the values we sliced with the new value of "slicing".
+print(new_list)
+
+
+# Deleting items from a list. PT 2
+l = [1, 2, 3, 4]
+m = [5, 6, 7, 8]
+n = [9, 10, 11, 12]
+o = [13, 14, 15, 16]
+
+l.clear() # This removes all items from the list.
+m.pop(1) # This removes an item from a specified index (6 in this case).
+n.remove(12) # This removes an item based on a specified value (12 in this case).
+del o[2] # This deletes an item based on specified index (15 in this case).

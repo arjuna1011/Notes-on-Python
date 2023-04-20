@@ -149,3 +149,11 @@ print(characters) # This will log the sorted list
 # [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '.', 'T', 'a', 'b', 'c', 'd', 'e', 'e', 'e', 
 # 'f', 'g', 'h', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'o', 'o', 'o', 'p', 'q', 'r', 'r', 
 # 's', 't', 'u', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# We can also sort lists regardless of capitalization
+
+names = ["Gary", "jacob", "Arjuna", "Michael", "larry", "paul"]
+sorted_names = sorted(names, key=str.casefold) # Just add this key value to the variable or list you want to sort.
+print(sorted_names)
+
+
