@@ -162,3 +162,95 @@ l.clear() # This removes all items from the list.
 m.pop(1) # This removes an item from a specified index (6 in this case).
 n.remove(12) # This removes an item based on a specified value (12 in this case).
 del o[2] # This deletes an item based on specified index (15 in this case).
+
+
+# Nested lists:
+
+new_even = [2,4,6,8]
+new_odd = [1,3,5,7]
+
+new_numbers = [new_even, new_odd] # This sill create a nested list because the 2 list variables are themselves wrapped in a list.
+print(new_numbers)
+
+# Coding style for writing nested lists
+menu = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", "spam"],
+    ["spam", "bacon", "sausage", "spam"],
+    ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
+    ["spam", "egg", "spam", "spam", "bacon", "spam"]
+]
+# You don't want to write your code all on one line if its more than 80 characters long, you want to space them out line by line.
+# The brackets can be on the same level as the starting bracket, or it can be on the same line as the variable name.
+
+for meal in menu:
+    if "spam" not in meal:
+        print(meal)
+        
+        for item in meal:
+            print(item)
+    else: 
+        print("{0} has a spam score of {1}"
+              .format(meal, meal.count("spam")))
+
+for meal in menu:
+    for item in meal:
+        if item != "spam":
+            print(item)
+    print()
+    
+# .join method
+flowers = ["lily",
+           "rose",
+           "sunflower",
+           "orchid",
+           "tulip",
+           "daffodil",
+           "lavender"
+]
+
+separator = " | "
+output = separator.join(flowers) # This will join the separator variable to the list, and will iterate the list for us.
+print(output)
+# Must be strings in order to join them.
+
+
+# .split method
+panagram = "The quick brown foxed jumped over the lazy dog"
+words = panagram.split() # returns a list of all items in the string that are separated by white space. (White space includes tabs, multiple lines, and spaces)
+print(words)
+
+split_numbers = "9,231,517,316,882,901"
+print(split_numbers.split(",")) # This will split the string where there is a comma. Returns a new list of all the numbers between the commas.
+
+# Challenge to convert a list of strings into a list of integers.
+
+generated_list = ['9', ' ',
+                  '2', '2', '3', ' ',
+                  '3', '6', '1', ' ',
+                  '4', '8', '7', ' ',
+                  '1', '5', '9', ' ',
+                  '2', '6', '1']
+
+values = "".join(generated_list)
+print(values)
+
+values_list = values.split()
+print(values_list)
+
+# For each index in the range of the length of the list.
+for index in range(len(values_list)):
+    values_list[index] = int(values_list[index]) # Turn each index into an int.
+
+print(values_list)
+
+# Creating a new list
+integer_values = []
+# For every value in values_list
+for value in values_list:
+    integer_values.append(int(value)) # Append the value as an integer to the list integer_values.
+    
+print(integer_values)
