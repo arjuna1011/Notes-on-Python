@@ -254,3 +254,10 @@ for value in values_list:
     integer_values.append(int(value)) # Append the value as an integer to the list integer_values.
     
 print(integer_values)
+
+# Unpacking a list.
+data = [1, 6, 7] # A list being assigned to the variable data.
+p, q, r = data # That list being unpacked into 3 different variables.
+print(p)
+print(q)
+print(r)
