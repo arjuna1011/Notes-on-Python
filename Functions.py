@@ -1,10 +1,51 @@
 # To start a function, you must use the keyword "def".
 # Then you will have the name of the function. "multiply" in this case.
 # And then you will have parameters, you must still include the () at the end of the function name even if there are no parameters being passed through.
-
+# Functions must have 2 lines seperating them from other lines of code.
 def multiply():
     result = 10.5 * 4
     return result
 
 answer = multiply()
 print(answer)
+
+# Parameters
+def addition(x, y):
+    new_result = x + y
+    return new_result
+
+# To print it or return the function, you must put in the arguments for the parameters, 6 and 6 in this case.
+new_answer = addition(6, 6)
+print(new_answer)
+
+# Calling the function elsewhere:
+for val in range(1,5):
+    adding = addition(4, val) # This will add 4 to each iteration of the loop.
+    print(adding)
+
+
+# Palindromes
+# A word that reads the same forwards and backwards. Normally used for fun, but can be used in many projects.
+
+# Here is a function to see if something is a palindrome.
+
+def is_palindrome(string):
+    return string[::-1].casefold() == string.casefold()
+
+print(is_palindrome("kayak")) # Returns true
+
+
+def palindrome_sentece(sentence):
+    string = ""
+    for char in sentence:
+        if char.isalnum():
+            string += char
+    
+    return string[::-1].casefold() == string.casefold()
+
+
+word = input("Please enter a word to check: ")
+if palindrome_sentece(word):
+    print("'{}' is a palindrome.".format(word))
+else:
+    print("'{}' is not a palindrome.".format(word))
