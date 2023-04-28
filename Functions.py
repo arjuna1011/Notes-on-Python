@@ -29,18 +29,32 @@ for val in range(1,5):
 
 # Here is a function to see if something is a palindrome.
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
+    """
+    Check if a string is a palindrome.
+    A palindrome is a string that reads the same forwards and backwards.
+    
+    :param string: The string to check.
+    :return: True if `string` is a palindrome, False otherwise.
+    """
     return string[::-1].casefold() == string.casefold()
 
 print(is_palindrome("kayak")) # Returns true
 
 
-def palindrome_sentece(sentence):
+def palindrome_sentece(sentence: str) -> bool:
+    """
+    Check if a sentence is a palindrome.
+    The function ignores whitespace, capitalization and puncuation in the sentence.
+    
+    :param sentence: The sentence to check.
+    :return: True if `sentence` is a palindrome, False otherwise.
+    """
     string = ""
     for char in sentence:
         if char.isalnum():
             string += char
-    
+    print(string)
     return string[::-1].casefold() == string.casefold()
 
 
@@ -49,3 +63,29 @@ if palindrome_sentece(word):
     print("'{}' is a palindrome.".format(word))
 else:
     print("'{}' is not a palindrome.".format(word))
+    
+
+# Funtion using docstrings and fibonacci sequence.
+
+def fibonacci(n: int) -> int:
+    """Return the `n`th Fibonacci number, for positive `n`."""
+    if 0 <= n <= 1:
+        return n
+    
+    n_minus1, n_minus2 = 1, 0
+    
+    result = None
+    for f in range(n-1):
+        result = n_minus2 + n_minus1
+        n_minus2 = n_minus1
+        n_minus1 = result
+        
+    return result
+
+
+for i in range(36):
+    print(i, fibonacci(i))
+
+# =======================================================================================================
+
+p = palindrome_sentece()
