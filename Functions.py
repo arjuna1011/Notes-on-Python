@@ -86,6 +86,27 @@ def fibonacci(n: int) -> int:
 for i in range(36):
     print(i, fibonacci(i))
 
-# =======================================================================================================
+# Fizzbuzz game
 
-p = palindrome_sentece()
+def fizz_buzz(int: int) -> str:
+    """
+    Fizz Buzz game
+    :param int: Any given number
+    :return: If the number is divisible by both 3 and 5, return fizz buzz
+             If the number is divisible by 3, return fizz
+             If the number is divisible by 5, return buzz
+             If the number is none of these, return the number.
+    """
+    if int % 3 == 0 and int % 5 == 0:
+        return "fizz buzz"
+    elif int % 3 == 0:
+        return "fizz"
+    elif int % 5 == 0:
+        return "buzz"
+    else:
+        return str(int)
+
+
+ 
+for i in range(1, 101):
+    print(fizz_buzz(i))
