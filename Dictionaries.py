@@ -30,3 +30,19 @@ for key in vehicles:
 
 for key, value in vehicles.items():
     print(key,value, sep=", ")
+    
+# Adding to dictionaries:
+
+vehicles["starfighter"] = "Lockhead F-104"
+print(vehicles)
+
+# Chaning values in a dictionary:
+vehicles["virago"] = "Yamaha XV535"
+print(vehicles)
+
+# Removing items from a dictionary:
+del vehicles['starfighter']
+print(vehicles)
+
+result = vehicles.pop("jimny")
+print(result)
