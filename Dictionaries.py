@@ -153,3 +153,21 @@ while True:
 
 for things in shopping_list.items():
     print(things)
+
+
+# setdefault method
+
+chicken_quantity = pantry.setdefault("chicken", 0)
+print(f"chicken: {chicken_quantity}")
+
+beans_quantity = pantry.setdefault("beans", 0)
+print(f"beans: {beans_quantity}")
+
+z_qualitity = pantry.setdefault("zucchini", "eight")
+print(f"zucchini: {z_qualitity}")
+
+print()
+print("`pantry` now contains....")
+
+for key, value in sorted(pantry.items()):
+    print(key, value)
